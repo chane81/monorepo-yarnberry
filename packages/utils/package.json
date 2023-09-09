@@ -1,0 +1,43 @@
+{
+  "name": "@lake/utils",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./datas": {
+      "import": "./dist/datas/index.js",
+      "require": "./dist/datas/index.cjs",
+      "types": "./dist/datas/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "datas": [
+        "./dist/datas"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "tsup": "^6.1.3",
+    "typescript": "^4.9.4"
+  }
+}
